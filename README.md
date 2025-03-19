@@ -8,8 +8,9 @@ Benvenuto nel progetto **Biblioteca**! Questo è un sistema di gestione di una b
 ![image](https://github.com/user-attachments/assets/4831a740-9aef-4411-b81e-5c2ea912f9aa)
 
 ### Frameworks
-  ![image](https://github.com/user-attachments/assets/f97fd1b7-fead-46fa-a197-0d2bc4b44e5a)
-**Thymeleaf** (Template Engine per la View)
+  ![image](https://github.com/user-attachments/assets/f97fd1b7-fead-46fa-a197-0d2bc4b44e5a)  
+
+###**Thymeleaf** (Template Engine per la View)
   ![image](https://github.com/user-attachments/assets/4cd62c05-e3b4-4b14-8d1b-5801275ce21f)
 
 ### Database   
