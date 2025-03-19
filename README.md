@@ -22,6 +22,9 @@ Benvenuto nel progetto **Biblioteca**! Questo è un sistema di gestione di una b
 
    ![image](https://github.com/user-attachments/assets/081980b0-9c6e-4024-a88c-c97d3af7bdcc)
 
+ **MVC** (MVC (Model-View-Controller) 
+
+ ![image](https://github.com/user-attachments/assets/bc410e0b-88b8-49ad-a7e8-c38396138ab1)
 
 ### Strumenti
 - **Maven** per la gestione delle dipendenze
