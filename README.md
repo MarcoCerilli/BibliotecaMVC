@@ -18,8 +18,8 @@ Benvenuto nel progetto **Biblioteca**! Questo è un sistema di gestione di una b
 ### Database   
 ![image](https://github.com/user-attachments/assets/3a364ed5-7a05-4a2e-b3e0-b844dcbcdf37)
 
-- **JPA/Hibernate** (per l'interazione con il database)
-- 
+ **JPA/Hibernate** (per l'interazione con il database)
+
    ![image](https://github.com/user-attachments/assets/081980b0-9c6e-4024-a88c-c97d3af7bdcc)
 
 
