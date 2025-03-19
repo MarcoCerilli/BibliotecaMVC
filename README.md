@@ -10,6 +10,7 @@ Benvenuto nel progetto **Biblioteca**! Questo è un sistema di gestione di una b
 ### Frameworks
 
   ![image](https://github.com/user-attachments/assets/f97fd1b7-fead-46fa-a197-0d2bc4b44e5a)  
+  
 ###**Thymeleaf** (Template Engine per la View)
 
   ![image](https://github.com/user-attachments/assets/4cd62c05-e3b4-4b14-8d1b-5801275ce21f)
@@ -18,6 +19,7 @@ Benvenuto nel progetto **Biblioteca**! Questo è un sistema di gestione di una b
 ![image](https://github.com/user-attachments/assets/3a364ed5-7a05-4a2e-b3e0-b844dcbcdf37)
 
 - **JPA/Hibernate** (per l'interazione con il database)
+- 
    ![image](https://github.com/user-attachments/assets/081980b0-9c6e-4024-a88c-c97d3af7bdcc)
 
 
