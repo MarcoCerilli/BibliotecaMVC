@@ -5,13 +5,16 @@ Benvenuto nel progetto **Biblioteca**! Questo è un sistema di gestione di una b
 ## Tecnologie utilizzate
 
 ### Linguaggi
-- **Java** ![image](https://github.com/user-attachments/assets/4831a740-9aef-4411-b81e-5c2ea912f9aa)
-
+- **Java** 
+![image](https://github.com/user-attachments/assets/4831a740-9aef-4411-b81e-5c2ea912f9aa)
 
 ### Frameworks
-- **Spring Framework** (inclusi Spring MVC, Spring Boot) ![image](https://github.com/user-attachments/assets/f97fd1b7-fead-46fa-a197-0d2bc4b44e5a)
+- **Spring Framework** (inclusi Spring MVC, Spring Boot)
+-  ![image](https://github.com/user-attachments/assets/f97fd1b7-fead-46fa-a197-0d2bc4b44e5a)
 
 - **Thymeleaf** (Template Engine per la View)
+- ![image](https://github.com/user-attachments/assets/4cd62c05-e3b4-4b14-8d1b-5801275ce21f)
+
   
 ### Database
 - **MySQL** ![image](https://github.com/user-attachments/assets/3a364ed5-7a05-4a2e-b3e0-b844dcbcdf37)
