@@ -1,67 +1,128 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca - Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biblioteca - Home</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Biblioteca</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/biblioteca">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/biblioteca/libri">Libri</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/biblioteca/aggiungi">Aggiungi Libro</a></li>
-                    <!-- Aggiungi altre voci qui -->
-                </ul>
-            </div>
-        </div>
-    </nav>
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand fs-1 text-white" href="/biblioteca">Biblioteca</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a class="nav-link text-white" href="/">Home</a>
+					</li>
+					<li class="nav-item"><a class="nav-link text-white"
+						href="/biblioteca/libri">Libri</a>
+				</ul>
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a class="btn btn-outline-light me-2"
+						href="/auth/login">Login</a></li>
+					<li class="nav-item"><a class="btn btn-warning"
+						href="/register">Registrati</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-    <!-- Hero Section -->
-    <section class="hero bg-primary text-white text-center py-5"
-        style="background-image: url('/images/library-background.jpg'); background-size: cover;">
-        <div class="container">
-            <h1 class="display-4 fw-bold">Benvenuto nella Biblioteca</h1>
-            <p class="lead mb-4">Gestisci la tua collezione di libri in modo semplice e veloce.</p>
-            <a href="/biblioteca/libri" class="btn btn-light btn-lg">Visualizza Libri</a>
-            <!-- Link aggiornato per visualizzare i libri -->
-            <!-- Bottone per il pop-up -->
-            <button id="infoBtn" class="btn btn-warning btn-lg mt-3">Informazioni</button>
-        </div>
-    </section>
+	<!-- Hero Section -->
+	<section class="hero bg-primary text-white text-center py-5"
+		style="background-image: url('/images/library-background.jpg'); background-size: cover;">
+		<div class="container">
+			<h1 class="display-4 fw-bold">Benvenuto nella Biblioteca</h1>
+			<p class="lead mb-4">Gestisci la tua collezione di libri in modo
+				semplice e veloce.</p>
+			<button id="infoBtn" class="btn btn-warning btn-lg mt-3">InfoChat</button>
+		</div>
+	</section>
 
-    <!-- Content -->
-    <div class="container mt-5">
-        <!-- Contenuto dinamico qui -->
-    </div>
+	<!-- Content Section -->
+	<div class="container mt-5">
+		<!-- Form di accesso alla chat -->
+		<div id="chatForm" class="mb-4" style="display: none;">
+			<h3>Entra nella chat</h3>
+			<form id="userForm">
+				<div class="mb-3">
+					<label for="username" class="form-label">Inserisci il tuo
+						nome</label> <input type="text" class="form-control" id="username"
+						required>
+				</div>
+				<button type="submit" class="btn btn-primary">Entra nella
+					chat</button>
+			</form>
+		</div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4 mt-5">
-        <p>&copy; 2025 Biblioteca. Tutti i diritti riservati.</p>
-        <a href="/privacy" class="text-white">Privacy Policy</a>
-    </footer>
+		<!-- Contenitore della chat -->
+		<div id="chatContainer" style="display: none;">
+			<h3>Chat in tempo reale</h3>
+			<div id="messages" style="height: 300px; overflow-y: auto;"></div>
+			<input type="text" id="message" class="form-control"
+				placeholder="Scrivi un messaggio" />
+			<button onclick="sendMessage()" class="btn btn-success mt-3">Invia</button>
+		</div>
+	</div>
 
-    <!-- Modal (Pop-up) -->
-    <div id="infoModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Informazioni sulla Biblioteca</h2>
-            <p>La nostra biblioteca offre una vasta collezione di libri per tutti i gusti. Puoi facilmente aggiungere, cercare e gestire i tuoi libri preferiti. Scopri di più nel nostro sistema.</p>
-        </div>
-    </div>
+	<!-- Footer -->
+	<footer class="bg-dark text-white text-center py-4 mt-5">
+		<p>&copy; 2025 Biblioteca. Tutti i diritti riservati.</p>
+		<a href="/privacy" class="text-white">Privacy Policy</a>
+	</footer>
 
-    <!-- Script JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/script.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.2/dist/sockjs.min.js"></script>
+	<script src="/js/chat.js"></script>
+
+	<script>
+		document.getElementById('infoBtn').addEventListener(
+				'click',
+				function() {
+					const chatForm = document.getElementById('chatForm');
+					const chatContainer = document
+							.getElementById('chatContainer');
+					const username = localStorage.getItem('username');
+
+					if (username) {
+						// Se l'utente ha già un nome, mostra direttamente la chat
+						chatForm.style.display = 'none';
+						chatContainer.style.display = 'block';
+					} else {
+						// Se non è loggato, mostra il form per inserire il nome
+						chatForm.style.display = 'block';
+						chatContainer.style.display = 'none';
+					}
+				});
+
+		document
+				.getElementById('userForm')
+				.addEventListener(
+						'submit',
+						function(event) {
+							event.preventDefault();
+							const username = document
+									.getElementById('username').value;
+							localStorage.setItem('username', username);
+
+							// Mostra la chat e nasconde il form
+							document.getElementById('chatForm').style.display = 'none';
+							document.getElementById('chatContainer').style.display = 'block';
+						});
+	</script>
+
 </body>
 </html>

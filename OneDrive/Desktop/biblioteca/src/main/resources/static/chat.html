@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat in tempo reale</title>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.0/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script src="/js/chat.js"></script> <!-- Assicurati che il percorso sia corretto -->
+    
+    <!-- Aggiungi il link al tuo file CSS -->
+    <link rel="stylesheet" href="styles.css"> <!-- Assicurati che il percorso sia corretto -->
+</head>
+<body>
+    <h1>Chat in tempo reale</h1>
+    
+    <!-- Contenitore della chat -->
+    <div class="chat-container">
+        <!-- Finestra dei messaggi -->
+        <div class="chat-box">
+            <!-- Contenitore dei messaggi, qui verranno aggiunti dinamicamente -->
+            <div id="messages" aria-live="polite"></div>
+        </div>
+
+        <!-- Form per inviare il messaggio -->
+        <form id="chatForm" onsubmit="sendMessage(); return false;">
+            <!-- Campo di input per il messaggio -->
+            <input type="text" id="message" class="chat-input" placeholder="Scrivi un messaggio" />
+            <!-- Pulsante per inviare il messaggio -->
+            <button type="submit" class="chat-submit">Invia</button>
+        </form>
+    </div>
+
+    <!-- Facoltativo: Aggiungi una sezione per lo stato -->
+    <div id="status" style="margin-top: 10px; font-size: 14px;"></div>
+</body>
+</html>
